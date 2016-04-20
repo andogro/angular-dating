@@ -1,4 +1,14 @@
+(function () {
+
 $(document).foundation()
 
-var app = angular.module('myApp', ['ngRoute']);
+  'use strict';
+
+  angular.module('myApp', [
+    'ngRoute',
+    'ngSanitize'
+  ]);
+
+})();
+
 

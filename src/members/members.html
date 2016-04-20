@@ -14,7 +14,9 @@
             <img src="images/dashinfinity.gif" />
         </div>
         <ul ng-repeat="items in info | limitTo:10"> 
-          <li>{{items.names.firstName}} {{items.names.lastName}}</li>
+          <p class="each-member">
+          <span class="img-left"><img src="{{items.avatar}}"></span>  {{items.username}} <br> {{items.company.bs}}
+          </p>
         </ul>  
     </section>
   </div>

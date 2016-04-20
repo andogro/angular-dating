@@ -2,7 +2,7 @@
     <div class="large-5 large-centered columns">
       <div class="signup-panel">
         <p class="welcome"> Register and start Dating!</p>
-        <form>
+        <form ng-submit="register()">
           <div class="row collapse">
             <div class="small-2  columns">
               <span class="prefix"><i class="fi-torso-female"></i></span>
@@ -52,7 +52,7 @@
             </div>
           </div>
         </form>
-        <a href="#" class="button ">Sign Up! </a>
+        <button type="submit" class="button" ng-click="register()">Sign Up! </button>
          <p>Already have an account? <a href="#/login">Login here &raquo</a></p>
       </div>
     </div>
