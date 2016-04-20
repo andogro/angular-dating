@@ -9,8 +9,9 @@ app.config(function($routeProvider) {
       controller: 'registerController'
     })
     .when('/members', {
-      templateUrl: 'views/members.html',
+      templateUrl: '../views/members.html',
       controller: 'membersController'
     })
     .otherwise('/');
 });
+

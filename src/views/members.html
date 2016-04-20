@@ -1,6 +1,25 @@
-    <section class="">  
-      <div ng-controller="membersController">
-        <button type="button" class="btn btn-warning" ng-click="search()">Test Button</button>
-        <p>{{ greeting }}</p>
-      </div>
+<div class="row">
+  <div class="medium-6 columns">
+    <section>  
+        <br>
+        <div class="small secondary expanded button-group">
+          <a class="button">All</a>
+          <a class="button">Popular</a>
+          <a class="button">Nearby</a>
+          <a class="button">Matches</a>
+          <a class="button">Convos</a>
+        </div>
+        
+        <div ng-show="loading"> 
+            <img src="images/dashinfinity.gif" />
+        </div>
+        <ul ng-repeat="items in info | limitTo:10"> 
+          <li>{{items.names.firstName}} {{items.names.lastName}}</li>
+        </ul>  
     </section>
+  </div>
+
+  <div class="medium-6 large-5 columns">
+    
+  </div>
+</div>

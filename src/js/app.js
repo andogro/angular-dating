@@ -1,4 +1,4 @@
-// sample angular code
+$(document).foundation()
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
 
