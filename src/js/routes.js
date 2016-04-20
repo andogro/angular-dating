@@ -1,15 +1,18 @@
 app.config(function($routeProvider) {
   $routeProvider
     .when('/login', {
-      templateUrl: 'views/login.html',
+      templateUrl: '../registration/views/login.html',
       controller: 'loginController'
     })
+    .when('/', {
+      templateUrl: '../views/home.html',
+    }) 
     .when('/register', {
-      templateUrl: 'views/register.html',
+      templateUrl: '../registration/views/register.html',
       controller: 'registerController'
     })
     .when('/members', {
-      templateUrl: '../views/members.html',
+      templateUrl: '../members/views/members.html',
       controller: 'membersController'
     })
     .otherwise('/');
