@@ -15,6 +15,11 @@
         $scope.info = data.data.data;
         $scope.loading = false;
         });
+
+        $scope.showOne = function(items) {
+          $scope.member = items;
+          $scope.show = true;
+        }
   }
 
 })();

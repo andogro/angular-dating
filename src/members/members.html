@@ -13,14 +13,20 @@
         <div ng-show="loading"> 
             <img src="images/dashinfinity.gif" />
         </div>
-        <ul ng-repeat="items in info | limitTo:10"> 
+        <ul ng-repeat="item in info | limitTo:10"> 
           <p class="each-member">
-          <span class="img-left"><img src="{{items.avatar}}"></span>  {{items.username}} <br> {{items.company.bs}}
+          <span class="img-left"><img src="{{item.avatar}}"></span>  {{item.username}} 
+          <br> {{item.company.bs}}
+          <br><br>
+          <button class="button" ng-click="showOne(item)">Learn More</a> 
           </p>
         </ul>  
     </section>
   </div>
 
   <div class="medium-6 large-5 columns">
+  <div ng-show="show">
+  These are the details for person 1 here
+  {{member}}
   </div>
 </div>
