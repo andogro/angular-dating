@@ -28,37 +28,39 @@
           $scope.loading = true;
           MemberService.search().then(function (data) {
           var info = data.data.data;
-           $scope.loading = false;
-           var popular = info.sort(function(a, b){
-              return b._matches.length - a._matches.length
+          $scope.loading = false;
+          var popular = info.sort(function(prev, next){
+              return next._matches.length - prev._matches.length
             })
-            $scope.info = popular;
+          $scope.info = popular;
           });          
         }
 
+        $scope.orderByMatches = function() {        
+          var user = JSON.parse($window.localStorage.getItem('user'));
+          var userid = user._id;
+          $scope.loading = true;
+          MemberService.search().then(function (data) {
+          var info = data.data.data;
+          var results = info.filter(function(obj) { 
+            console.log(obj._matches);
+            return obj._matches 
+          });
+          console.log(results);
+          //not quite
+          $scope.loading = false;
+          
+          var matched = ""
+          $scope.info = matched;
+          });  
 
-        $scope.orderByMatches = function(getUserInfo) {        
-            
-            console.log("GetInfo"+getUserInfo);
-
-            var user = $window.localStorage.getItem('user');
-
-            console.log("user"+user)
-
-            var username = user.username;
-
-            console.log("Username"+username);
-
+             // Pseudo
              //get an array of all matches of all users
 
              //get the current user's id number
 
              //if any matches, then return those matches
-
-
-
-            // sort by matches
-            // $scope.info = UPDATED ARRAY          
+      
         }
 
 

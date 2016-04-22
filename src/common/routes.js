@@ -36,7 +36,7 @@
       preventLoggedIn: false
     })
     .when('/edit', {
-      templateUrl: '../components/auth/register.html',
+      templateUrl: '../components/members/edit.html',
       controller: 'registerController',
       restricted: true,
       preventLoggedIn: false

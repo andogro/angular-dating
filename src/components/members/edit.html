@@ -1,0 +1,197 @@
+<div class="row">
+    <div class="large-5 large-centered columns">
+      <div class="signup-panel">
+        <p class="welcome"> Register and start Dating!</p>
+        <form ng-submit="edit()">
+          
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="username" ng-model="user.username" value="user.username">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="firstname" ng-model="user.names.firstName">
+            </div>
+          </div>
+          
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="last name" ng-model="user.names.lastName">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="description" ng-model="user.description">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="avatar" ng-model="user.avatar">
+            </div>
+          </div>
+
+
+          <div class="row collapse">
+            <div class="small-2 columns">
+              <span class="prefix"><i class="fi-mail"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="email" ng-model="user.email">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="password" ng-model="user.password">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="date" placeholder="dob" ng-model="user.dob">
+            </div>
+          </div>
+
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="phone" ng-model="user.phone">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="address street" ng-model="user.address.street">
+            </div>
+          </div>
+
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="address zipcode" ng-model="user.address.zipcode">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="number" placeholder="address geo lng" ng-model="user.address.geo.lng">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="number" placeholder="address geo lat" ng-model="user.address.geo.lat">
+            </div>
+          </div>
+
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="address city" ng-model="user.address.city">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="address suite" ng-model="user.address.suite">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="website" ng-model="user.website">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="company bs" ng-model="user.company.bs">
+            </div>
+          </div>
+
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="company catchphrase" ng-model="user.company.catchPhrase">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="company name" ng-model="user.company.name">
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="gender (num)" ng-model="user.gender">
+            </div>
+          </div>
+          
+          <button type="submit" class="button">Edit Your Account </button>
+        </form>
+
+      </div>
+    </div>
+   </div>
