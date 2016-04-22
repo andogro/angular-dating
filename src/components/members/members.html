@@ -14,7 +14,7 @@
             <img src="images/dashinfinity.gif" />
         </div>
 
-          <ul ng-repeat="item in info"> 
+          <ul ng-repeat="item in info | filter:{active:true}"> 
             <div show-member></div>
             <p class="each-member">
             <span class="img-left"><img src="{{item.avatar}}"></span> 

@@ -14,7 +14,8 @@
         MemberService.search().then(function (data) {
           $scope.info = data.data.data;
           $scope.loading = false;
-          $scope.popularity = data.data.data._matches;
+          $scope.info.map
+          console.log("This is scope active"+ $scope.active)
         });
 
         $scope.orderByPopular = function() {
