@@ -5,9 +5,9 @@
   angular.module('myApp')
     .controller('membersController', membersController);
 
-  membersController.$inject = ['$scope', '$window', 'MemberService'];
+  membersController.$inject = ['$scope', '$window', 'MemberService', 'authService'];
 
-  function membersController($scope, $window, MemberService) {
+  function membersController($scope, $window, MemberService, authService) {
 
         $scope.loading = true;
 
@@ -33,20 +33,22 @@
               return b._matches.length - a._matches.length
             })
             $scope.info = popular;
-
           });          
         }
 
 
-        $scope.orderByMatches = function() {
-          MemberService.search().then(function (data) {
-            console.log("scope.user"+$scope.user);
-             var info = data.data.data;  
+        $scope.orderByMatches = function(getUserInfo) {        
             
+            console.log("GetInfo"+getUserInfo);
 
+            var user = $window.localStorage.getItem('user');
 
-            console.log(info);
-             
+            console.log("user"+user)
+
+            var username = user.username;
+
+            console.log("Username"+username);
+
              //get an array of all matches of all users
 
              //get the current user's id number
@@ -56,8 +58,7 @@
 
 
             // sort by matches
-            // $scope.info = UPDATED ARRAY
-          });          
+            // $scope.info = UPDATED ARRAY          
         }
 
 
