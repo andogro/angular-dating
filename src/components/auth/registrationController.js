@@ -10,10 +10,12 @@
   function registerController($rootScope, $scope, $location, authService) {
     $scope.user = {};
     $scope.register = function() {
+      $scope.user.slug = $scope.user.username;
+      debugger;
       authService.register($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
-          $location.path('/');
+          $location.path('/members');
           $rootScope.currentUser = authService.getUserInfo();
         })
         .catch(function(err) {

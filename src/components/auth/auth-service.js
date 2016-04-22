@@ -27,6 +27,7 @@
         $window.localStorage.clear();
       },
       register: function(user) {
+        user = angular.toJson(user)
         return $http.post('https://galvanize-student-apis.herokuapp.com/gdating/auth/register', user);
       },
       setUserInfo: function(userData) {

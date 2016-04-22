@@ -35,13 +35,18 @@
       restricted: true,
       preventLoggedIn: false
     })
+    .when('/edit', {
+      templateUrl: '../components/auth/register.html',
+      controller: 'registerController',
+      restricted: true,
+      preventLoggedIn: false
+    })
     .when('/logout', {
       restricted: false,
       preventLoggedIn: false,
       resolve: {
         test: function(authService, $rootScope, $location) {
-          authService.logout();
-          $rootScope.currentUser = authService.getUserInfo();
+          authService.logout($rootScope.user);
           $location.path('/');
         }
       }

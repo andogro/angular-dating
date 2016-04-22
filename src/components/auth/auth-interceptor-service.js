@@ -10,6 +10,7 @@
   function authInterceptor($window) {
     return {
       request: function(config) {
+        //config is the request object, if token adds 
         // check for token in headers
         // config.headers['X-requested-with'] = XMLHttpRequest;
         var token = $window.localStorage.getItem('token');
