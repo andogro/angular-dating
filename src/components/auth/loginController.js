@@ -10,7 +10,7 @@
 
   function loginController($rootScope, $scope, $location, authService) {
     $scope.user = {};
-    console.log('test');
+    // console.log('test');
     $scope.login = function() {
       console.log('test');
       authService.login($scope.user)

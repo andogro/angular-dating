@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-   <nav ng-include="'views/nav.html'"></nav>
+   <nav ng-include="'components/views/nav.html'"></nav>
  </header>
  <!-- sample angular code -->
 
@@ -38,22 +38,23 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-sanitize.js"></script>
 
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/routes.js"></script>
-<script type="text/javascript" src="js/auth-interceptor-service.js"></script> 
-<script type="text/javascript" src="js/auth-service.js"></script>   
+<script type="text/javascript" src="common/app.js"></script>
+<script type="text/javascript" src="common/routes.js"></script>
+<script type="text/javascript" src="components/auth/auth-interceptor-service.js"></script> 
+<script type="text/javascript" src="components/auth/auth-service.js"></script>   
 
 <!-- member info -->
-<script type="text/javascript" src="members/membersController.js"></script>
-<script type="text/javascript" src="members/member-service.js"></script>
+<script type="text/javascript" src="components/members/membersController.js"></script>
+<script type="text/javascript" src="components/members/member-service.js"></script>
+<script type="text/javascript" src="components/members/membersDirectives.js"></script>
 
 <!-- registration info -->
-<script type="text/javascript" src="registration/registrationController.js"></script>
-<script type="text/javascript" src="registration/registrationService.js"></script>
+<script type="text/javascript" src="components/auth/registrationController.js"></script>
+<script type="text/javascript" src="components/auth/registrationService.js"></script>
 
 <!-- login info -->
-<script type="text/javascript" src="login/loginController.js"></script>
-<script type="text/javascript" src="login/loginService.js"></script>
+<script type="text/javascript" src="components/auth/loginController.js"></script>
+<script type="text/javascript" src="components/auth/loginService.js"></script>
 
 
 

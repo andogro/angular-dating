@@ -30,6 +30,7 @@
   margin-left: 35%;
 }
 
+/*member css*/
 .img-left {
   float: left;
   margin: 5px;
@@ -41,5 +42,27 @@
   background-color: #eeeeee;
   border: 2px solid;
   height: 140px;
+}
+
+.center {
+  text-align: center;
+}
+
+.one-member {
+  width: 400px;
+  margin-top: 75px;
+  padding: 10px;
+  border: 2px solid gray;
+}
+
+.over {
+    height: 700px;
+    overflow: scroll;
+}
+
+.overflownone {
+
+    height: 700px;
+    overflow: none;
 }
 

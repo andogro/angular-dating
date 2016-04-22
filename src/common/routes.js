@@ -13,24 +13,24 @@
   function appConfig($routeProvider, $httpProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: '../views/home.html',
+      templateUrl: '../components/views/home.html',
       restricted: true,
       preventLoggedIn: false
     })
     .when('/register',{
-      templateUrl: '../registration/register.html',
+      templateUrl: '../components/auth/register.html',
       controller: 'registerController',
       restricted: false,
       preventLoggedIn: true
     })
     .when('/login', {
-      templateUrl: '../login/login.html',
+      templateUrl: '../components/auth/login.html',
       controller: 'loginController',
       restricted: false,
       preventLoggedIn: true
     })
     .when('/members', {
-      templateUrl: '../members/members.html',
+      templateUrl: '../components/members/members.html',
       controller: 'membersController',
       restricted: true,
       preventLoggedIn: false

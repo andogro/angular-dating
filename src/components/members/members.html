@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="medium-6 columns over">
+    <section>  
+        <br>
+        <div class="small secondary expanded button-group">
+          <a class="button">All</a>
+          <a class="button" ng-model="popular" ng-click="orderByPopular()">Popular</a>
+          <a class="button" ng-model="nearby">Nearby</a>
+          <a class="button" ng-model="matches" ng-click="orderByMatches()">Matches</a>
+          <a class="button" gn-model="convos">Convos</a>
+        </div>
+        
+        <div ng-show="loading" class="center"> 
+            <img src="images/dashinfinity.gif" />
+        </div>
+
+          <ul ng-repeat="item in info"> 
+            <div show-member></div>
+            <p class="each-member">
+            <span class="img-left"><img src="{{item.avatar}}"></span> 
+             {{item.username}} 
+            <br> {{item.company.bs}}<br>
+            <button class="button" ng-click="showOne(item)">Learn More</button> 
+            </p>
+          </ul>
+    </section>
+  </div>
+
+  <div class="medium-6 large-5 columns overflownone">
+    <div ng-show="show" class="one-member">
+        <p><div my-shared-scope></div></p>
+  </div>
+</div>
