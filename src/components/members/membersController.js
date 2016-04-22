@@ -14,34 +14,33 @@
         MemberService.search().then(function (data) {
           $scope.info = data.data.data;
           $scope.loading = false;
-          $scope.info.map
-          console.log("This is scope active"+ $scope.active)
         });
 
+        $scope.viewAll = function() {
+        $scope.loading = true;
+        MemberService.search().then(function (data) {
+          $scope.info = data.data.data;
+          $scope.loading = false;
+        });          
+        }
+
         $scope.orderByPopular = function() {
+          $scope.loading = true;
           MemberService.search().then(function (data) {
           var info = data.data.data;
-          console.log(info);
-          var newArray = [];
-          info.forEach(function(item){
-              newArray.push(item.username, item.avatar,item._matches.length);
-          });
+           $scope.loading = false;
+           var popular = info.sort(function(a, b){
+              return b._matches.length - a._matches.length
+            })
+            $scope.info = popular;
 
-
-          console.log("This is newArray"+testArray)
-
-// Users can be sorted by Popularity where 
-// popularity is defined as those users having 
-// the most relative matches
-            // sort by matches
-            // $scope.info = UPDATED ARRAY
           });          
         }
 
 
         $scope.orderByMatches = function() {
           MemberService.search().then(function (data) {
-             
+            console.log("scope.user"+$scope.user);
              var info = data.data.data;  
             
 
